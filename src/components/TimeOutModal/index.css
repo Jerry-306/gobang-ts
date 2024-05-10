@@ -1,0 +1,66 @@
+.timeout-modal-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2b2b2b80;
+    z-index: 3;
+}
+
+.timeout-modal-content {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -150px;
+    text-align: center;
+    font-size: 22px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
+    border-radius: 10px;
+}
+
+.timeout-modal-xiaoxin {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.timeout-modal-title {
+    color: #de3a3a;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.timeout-modal-player {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 32px;
+}
+
+.timeout-modal-desc {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    color: #FFA900;
+}
+
+.timeout-modal-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.timeout-modal-close:hover {
+    transform: scale(1.1);
+}

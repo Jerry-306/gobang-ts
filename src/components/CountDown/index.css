@@ -1,0 +1,14 @@
+.countdown {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 60px;
+    margin-left: 430px;
+    margin-top: -420px;
+    font-size: 26px;
+    text-align: center;
+    color: brown;
+    line-height: 60px;
+    text-shadow: 0 0 10px #FFA900, 0 0 20px #efb75f, 0 0 10px #efb75f, 0 0 10px #efb75f, 0 0 80px #efb75f;
+}

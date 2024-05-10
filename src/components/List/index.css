@@ -1,0 +1,87 @@
+.list-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    margin-left: -730px;
+    box-shadow: 0px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
+    border-radius: 10px;
+}
+
+.list_xiaoxin {
+    width: 30px;
+    height: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 22px;
+    color: #FFA900;
+}
+
+.listheader-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    box-shadow: 0px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.listheader-index {
+    width: 15%;
+    height: 100%;
+}
+
+.listheader-time {
+    width: 35%;
+    height: 100%;
+    color: #6403e2;
+}
+
+.listheader-winner {
+    width: 20%;
+    height: 100%;
+    color: #fe1717;
+}
+
+.listheader-review {
+    width: 15%;
+    height: 100%;
+    color: #04c1a2;
+}
+
+.list-scrollContainer {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 0px 15px 0px;
+    max-height: 500px;
+    overflow: scroll;
+}
+
+.list-scrollContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.no-history {
+    position: relative;
+    height: 50px;
+    margin: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.4s;
+}
+
+.no-history:hover {
+    transform: scale(1.05);
+}
