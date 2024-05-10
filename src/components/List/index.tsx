@@ -2,7 +2,7 @@ import ListItem from "../ListItem";
 import { list } from "../../store/index";
 import { useRecoilValue } from "recoil";
 import { motion } from "framer-motion";
-import { Obj } from '../../types/index';
+import { Obj } from "../../types/index";
 import "./index.css";
 
 const List = () => {

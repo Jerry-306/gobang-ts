@@ -3,7 +3,6 @@ import Home from "./Pages/Home";
 import Welcome from "./Pages/Welcome";
 
 function App() {
-
   return (
     <>
       <Routes>
@@ -12,7 +11,7 @@ function App() {
         <Route path="*" element={<Navigate to="/welcome" />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -11,7 +11,7 @@ import boardValues, {
   reviewEnd,
   gaming,
   difficultyLevel,
-  timeoutCount
+  timeoutCount,
 } from "../../store/index";
 import { NumberMatrix, DifficultyLevel, Color } from "../../types/index";
 import "./index.css";
@@ -30,9 +30,10 @@ const FunctionButtons = () => {
   const level = useRecoilValue<DifficultyLevel>(difficultyLevel);
   const setTimeoutCount = useSetRecoilState<number[]>(timeoutCount);
 
-
   const handleReset = (): void => {
-    const newMatrix: NumberMatrix = new Array(19).fill(0).map(() => new Array(19).fill(0));
+    const newMatrix: NumberMatrix = new Array(19)
+      .fill(0)
+      .map(() => new Array(19).fill(0));
     setMatrix(newMatrix);
     setStep([]);
     setSelectedColor(Color.Black);

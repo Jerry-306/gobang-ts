@@ -1,6 +1,11 @@
 import { atom } from "recoil";
 
-import { NumberMatrix, DifficultyLevel, GamePattern, Winner } from "../types/index";
+import {
+  NumberMatrix,
+  DifficultyLevel,
+  GamePattern,
+  Winner,
+} from "../types/index";
 
 // 棋盘数据
 const boardValues = atom({
@@ -108,6 +113,6 @@ export const isWin11 = atom({
 export const timeoutCount = atom({
   key: "timeoutCount",
   default: [0, 0],
-})
+});
 
 export default boardValues;

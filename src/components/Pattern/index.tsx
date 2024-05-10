@@ -6,14 +6,15 @@ import {
 } from "../../store/index";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { motion } from "framer-motion";
-import { DifficultyLevel, GamePattern } from '../../types/index';
+import { DifficultyLevel, GamePattern } from "../../types/index";
 import "./index.css";
 
 export default function Pattern() {
   const [pattern, setPattern] = useRecoilState<GamePattern>(gamePattern);
   const [level, setLevel] = useRecoilState<DifficultyLevel>(difficultyLevel);
   const isGaming = useRecoilValue<boolean>(gaming);
-  const setCount: (count: number) => void = useSetRecoilState<number>(countdown);
+  const setCount: (count: number) => void =
+    useSetRecoilState<number>(countdown);
 
   const changeDifficulty = (tag: DifficultyLevel): void => {
     setLevel(tag);
@@ -45,7 +46,10 @@ export default function Pattern() {
       <motion.div
         whileHover={whileHover}
         whileTap={whileTap}
-        className={["pattern-item", pattern === GamePattern.HumanVsMachine ? "active" : ""].join(" ")}
+        className={[
+          "pattern-item",
+          pattern === GamePattern.HumanVsMachine ? "active" : "",
+        ].join(" ")}
         onClick={() => setPattern(GamePattern.HumanVsMachine)}
       >
         人机对战
@@ -53,7 +57,10 @@ export default function Pattern() {
       <motion.div
         whileHover={whileHover}
         whileTap={whileTap}
-        className={["pattern-item", pattern === GamePattern.HumanVsHuman ? "active" : ""].join(" ")}
+        className={[
+          "pattern-item",
+          pattern === GamePattern.HumanVsHuman ? "active" : "",
+        ].join(" ")}
         onClick={() => setPattern(GamePattern.HumanVsHuman)}
       >
         双人对战
@@ -61,7 +68,10 @@ export default function Pattern() {
       <motion.div
         whileHover={whileHover}
         whileTap={whileTap}
-        className={["difficulty-level", level === DifficultyLevel.Easy ? "active" : ""].join(" ")}
+        className={[
+          "difficulty-level",
+          level === DifficultyLevel.Easy ? "active" : "",
+        ].join(" ")}
         onClick={() => changeDifficulty(DifficultyLevel.Easy)}
       >
         简单
@@ -69,7 +79,10 @@ export default function Pattern() {
       <motion.div
         whileHover={whileHover}
         whileTap={whileTap}
-        className={["difficulty-level", level === DifficultyLevel.Medium ? "active" : ""].join(" ")}
+        className={[
+          "difficulty-level",
+          level === DifficultyLevel.Medium ? "active" : "",
+        ].join(" ")}
         onClick={() => changeDifficulty(DifficultyLevel.Medium)}
       >
         中等
@@ -77,7 +90,10 @@ export default function Pattern() {
       <motion.div
         whileHover={whileHover}
         whileTap={whileTap}
-        className={["difficulty-level", level === DifficultyLevel.Hard ? "active" : ""].join(" ")}
+        className={[
+          "difficulty-level",
+          level === DifficultyLevel.Hard ? "active" : "",
+        ].join(" ")}
         onClick={() => changeDifficulty(DifficultyLevel.Hard)}
       >
         困难

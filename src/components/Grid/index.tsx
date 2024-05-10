@@ -11,7 +11,13 @@ import boardValues, {
 } from "../../store/index";
 import useHover from "../../Hooks/useHover";
 import { autoPlay } from "../../utils/index";
-import { BoardValue, NumberMatrix, DifficultyLevel, GamePattern, Color } from "../../types/index";
+import {
+  BoardValue,
+  NumberMatrix,
+  DifficultyLevel,
+  GamePattern,
+  Color,
+} from "../../types/index";
 import "./index.css";
 
 interface Props {
@@ -25,7 +31,8 @@ export default function Grid({ row, colum, setTimer }: Props) {
   const [matrix, setMatrix] = useRecoilState<NumberMatrix>(boardValues);
   const [curColor, setCurColor] = useRecoilState<Color>(color);
   const [stepArray, setStepArray] = useRecoilState<NumberMatrix>(steps);
-  const [subStepArray, setSubStepArray] = useRecoilState<NumberMatrix>(subSteps);
+  const [subStepArray, setSubStepArray] =
+    useRecoilState<NumberMatrix>(subSteps);
   const [autoPlayTime, setAutoPlayTime] = useRecoilState<number>(autoPlayTimer);
   const [isGaming, setIsGaming] = useRecoilState<boolean>(gaming);
   const pattern = useRecoilValue<GamePattern>(gamePattern);
@@ -74,7 +81,12 @@ export default function Grid({ row, colum, setTimer }: Props) {
     }
   };
 
-  const autoClick = (matrix: NumberMatrix, curColor: Color, stepArrayNew: NumberMatrix, subStepArrayNew: NumberMatrix) => {
+  const autoClick = (
+    matrix: NumberMatrix,
+    curColor: Color,
+    stepArrayNew: NumberMatrix,
+    subStepArrayNew: NumberMatrix
+  ) => {
     const [row, colum] = autoPlay(matrix, curColor);
     // setTimer();
     // 对象深拷贝
@@ -103,13 +115,13 @@ export default function Grid({ row, colum, setTimer }: Props) {
             ? "🐻‍❄️"
             : "🐻"
           : isHovering
-            ? "💢"
-            : ""
+          ? "💢"
+          : ""
         : matrix[row][colum] !== BoardValue.Empty
-          ? matrix[row][colum] === BoardValue.White
-            ? "⚪"
-            : "⚫"
-          : ""}
+        ? matrix[row][colum] === BoardValue.White
+          ? "⚪"
+          : "⚫"
+        : ""}
     </div>
   );
 }

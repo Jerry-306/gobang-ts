@@ -1,11 +1,11 @@
 import { showModal, isWin11 } from "../../store/index";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 import { motion } from "framer-motion";
-import { Winner } from '../../types/index';
+import { Winner } from "../../types/index";
 import "./index.css";
 
 interface Props {
-  winner: Winner
+  winner: Winner;
 }
 
 export default function Modal({ winner }: Props) {

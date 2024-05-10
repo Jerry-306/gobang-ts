@@ -1,8 +1,14 @@
-import boardValues, { countdown, timer, isReviewing, gameOver, difficultyLevel } from "../../store/index";
+import boardValues, {
+  countdown,
+  timer,
+  isReviewing,
+  gameOver,
+  difficultyLevel,
+} from "../../store/index";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { motion } from "framer-motion";
 import Grid from "../Grid";
-import { DifficultyLevel } from '../../types/index';
+import { DifficultyLevel } from "../../types/index";
 import "./index.css";
 
 export default function CheckerBoard() {
@@ -19,7 +25,7 @@ export default function CheckerBoard() {
   const [time, setTime] = useRecoilState<number>(timer);
   const isGameOver = useRecoilValue<boolean>(gameOver);
   const reviewing = useRecoilValue<boolean>(isReviewing);
-  const level = useRecoilValue<DifficultyLevel>(difficultyLevel)
+  const level = useRecoilValue<DifficultyLevel>(difficultyLevel);
 
   function setTimer() {
     if (time) {

@@ -30,8 +30,12 @@ const ListItem = (props: Props) => {
     setIsReviewEnd(false);
     setReviewing(true);
     // 防止出现对象浅复制
-    const subMatrix: NumberMatrix = new Array(19).fill(0).map(() => new Array(19).fill(0));
-    const emptyMatrix: NumberMatrix = new Array(19).fill(0).map(() => new Array(19).fill(0));
+    const subMatrix: NumberMatrix = new Array(19)
+      .fill(0)
+      .map(() => new Array(19).fill(0));
+    const emptyMatrix: NumberMatrix = new Array(19)
+      .fill(0)
+      .map(() => new Array(19).fill(0));
     // 如果当前棋盘不为空，棋盘先清零
     setMatrix(emptyMatrix);
     // 步骤
@@ -88,9 +92,13 @@ const ListItem = (props: Props) => {
       <div className="listitem-index">{index}</div>
       <div className="listitem-time">{time}</div>
       {isWindows11 ? (
-        <div className="listitem-winner">{winner === Winner.White ? "🐻‍❄️" : "🐻"}</div>
+        <div className="listitem-winner">
+          {winner === Winner.White ? "🐻‍❄️" : "🐻"}
+        </div>
       ) : (
-        <div className="listitem-winner">{winner === Winner.White ? "⚪" : "⚫"}</div>
+        <div className="listitem-winner">
+          {winner === Winner.White ? "⚪" : "⚫"}
+        </div>
       )}
       <div className="listitem-review" onClick={handleReview}>
         👁️‍🗨️

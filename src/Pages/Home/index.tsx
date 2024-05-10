@@ -22,9 +22,14 @@ import Modal from "../../components/Modal";
 import FunctionMenu from "../../components/FunctionMenu";
 import Clock from "../../components/Clock";
 import CountDown from "../../components/CountDown";
-// import Animation from "../../components/Animation";
 import alertWinner, { getTime } from "../../utils/index";
-import { NumberMatrix, Obj, DifficultyLevel, Winner, Color } from "../../types/index";
+import {
+  NumberMatrix,
+  Obj,
+  DifficultyLevel,
+  Winner,
+  Color,
+} from "../../types/index";
 import "./index.css";
 
 function Home() {
@@ -64,7 +69,7 @@ function Home() {
         const obj: Obj = {
           time: getTime(),
           winner: res,
-          step: step
+          step: step,
         };
         const array = [...listArray];
         array.unshift(obj);
@@ -87,7 +92,10 @@ function Home() {
 
   useEffect(() => {
     const userAgent = navigator.userAgent;
-    if (/Windows NT/.test(userAgent) && !/Windows NT 5|Windows NT 6/.test(userAgent)) {
+    if (
+      /Windows NT/.test(userAgent) &&
+      !/Windows NT 5|Windows NT 6/.test(userAgent)
+    ) {
       const platformVersion = userAgent.match(/Windows NT (\d+\.\d+)/)?.[1];
       if (platformVersion && parseFloat(platformVersion.split(".")[0]) >= 10) {
         setIsWin11(true);
@@ -96,11 +104,10 @@ function Home() {
   }, []);
 
   return (
-    <div className="app"> 
+    <div className="app">
       <CheckerBoard />
       <List />
       <FunctionMenu />
-      {/* <Animation /> */}
       {show ? <Modal winner={curWinner} /> : null}
       <Clock />
       <CountDown />

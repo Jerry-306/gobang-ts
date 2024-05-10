@@ -23,7 +23,9 @@ export default function Welcome() {
           <div className="shadow"></div>
         </div>
       </div>
-      <Link to="/home" className="play-game">PLAY</Link>
+      <Link to="/home" className="play-game">
+        PLAY
+      </Link>
     </div>
   );
 }
