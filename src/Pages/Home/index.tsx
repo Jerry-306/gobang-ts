@@ -79,16 +79,15 @@ function Home() {
     }
   }, [matrix]);
 
-  const setStorage = () => {
-    localStorage.setItem("historyList", JSON.stringify(listArray));
-  };
-
   useEffect(() => {
+    const setStorage = () => {
+      localStorage.setItem("historyList", JSON.stringify(listArray));
+    };
     window.addEventListener("beforeunload", setStorage);
     return () => {
       window.removeEventListener("beforeunload", setStorage);
     };
-  });
+  }, [listArray]);
 
   useEffect(() => {
     const userAgent = navigator.userAgent;
