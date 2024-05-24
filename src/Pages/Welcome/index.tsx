@@ -3,18 +3,6 @@ import { motion } from "framer-motion";
 import "./index.css";
 
 export default function Welcome() {
-  const visible = {
-    backgroundPosition: "0",
-    textShadow:
-      "0 0 10px #FFA900, 0 0 20px #efb75f, 0 0 40px #efb75f, 0 0 80px #efb75f, 0 0 160px #efb75f",
-    transition: {
-      type: "spring",
-      bounce: 0.25,
-      duration: 1,
-      stiffness: 100,
-      delay: 0.6,
-    },
-  };
   const whileHover = {
     scale: 1.1,
     color: "#FFA900",
@@ -30,7 +18,7 @@ export default function Welcome() {
   const nav = useNavigate();
   return (
     <div className="welcome-root">
-      <motion.h1 animate={visible}>W E L C O M E</motion.h1>
+      <h1>W E L C O M E</h1>
       <div id="container">
         <div className="ghost">
           <div className="body">
