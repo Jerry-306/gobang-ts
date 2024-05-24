@@ -172,7 +172,6 @@
     line-height: 100px;
     border-radius: 50px;
     box-shadow: 0px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
-    /* animation: ghostFloat 2s ease-in-out infinite; */
   }
   
   @keyframes ghostFloat {
