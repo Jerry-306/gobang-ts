@@ -18,6 +18,8 @@ body {
   background-color: var(--bg-color);
   font-family: "Creepster", cursive;
   color: var(--text-color);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 

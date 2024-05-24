@@ -5,12 +5,12 @@
     justify-content: center;
     margin: 0;
     min-height: 100vh;
-    background: #010341;
+    background: var(--bg-color);
   }
   
   h1 {
     position: absolute;
-    top: 1px;
+    top: 0;
     font-family: "Creepster", cursive;
     font-size: 100px;
     color: transparent;
@@ -19,15 +19,6 @@
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -850px 0;
-    transition: background-position 1s, text-shadow 1s;
-    transition-delay: 0.6s, 0s;
-  }
-  
-  h1:hover {
-    transition: background-position 1s, text-shadow 1s;
-    transition-delay: 0s, 1s;
-    background-position: 0 0;
-    text-shadow: 0 0 10px #FFA900, 0 0 20px #efb75f, 0 0 40px #efb75f, 0 0 80px #efb75f, 0 0 160px #efb75f;
   }
 
   #container {
@@ -57,7 +48,7 @@
   .ghost .body .face .eyes {
     width: 1.9rem;
     height: 2.6rem;
-    background: #01000a;
+    background: var(--bg-color);
     border-radius: 50%;
     animation: eyesBlink 3s linear infinites;
   }
@@ -107,7 +98,7 @@
     left: .3rem;
     height: inherit;
     border-radius: 50%;
-    box-shadow: 0px 5px 0px 0px #01000a;
+    box-shadow: 0px 5px 0px 0px var(--box-shadow);
   }
   
   .ghost .bottom {
@@ -165,7 +156,7 @@
     height: 1rem;
     top: 20rem;
     border-radius: 50%;
-    background: #110f2b;
+    background: var(--bg-color);
     filter: blur(0.1rem);
     animation: shadowAnimation 2s linear infinite;
   }
@@ -176,16 +167,12 @@
     margin-top: 100px;
     text-align: center;
     text-decoration: none;
+    color: #5939db;
     font-size: 32px;
     line-height: 100px;
     border-radius: 50px;
     box-shadow: 0px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
-    animation: ghostFloat 2s ease-in-out infinite;
-  }
-
-  .play-game:hover {
-    color: #FFA900;
-    box-shadow: 0 0 10px #FFA900, 0 0 20px #efb75f, 0 0 40px #efb75f, 0 0 80px #efb75f, 0 0 160px #efb75f;
+    /* animation: ghostFloat 2s ease-in-out infinite; */
   }
   
   @keyframes ghostFloat {
