@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./index.css";
 
 export default function Welcome() {
-  const test = {
+  const visible = {
     backgroundPosition: "0",
     textShadow:
       "0 0 10px #FFA900, 0 0 20px #efb75f, 0 0 40px #efb75f, 0 0 80px #efb75f, 0 0 160px #efb75f",
@@ -30,7 +30,7 @@ export default function Welcome() {
   const nav = useNavigate();
   return (
     <div className="welcome-root">
-      <motion.h1 animate={test}>W E L C O M E</motion.h1>
+      <motion.h1 animate={visible}>W E L C O M E</motion.h1>
       <div id="container">
         <div className="ghost">
           <div className="body">
