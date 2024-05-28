@@ -41,7 +41,7 @@ export default function Animation() {
         <div className="side bottom" />
         <div className="side back" />
         <div className="side a_xiaoxin">
-          <img className="a_xiaoxin_img" alt="xiaoxin" src="xiaoxin.gif" />
+          <img className="a_xiaoxin_img" alt="xiaoxin" src="../../assets/xiaoxin.gif" />
         </div>
       </div>
     </motion.div>

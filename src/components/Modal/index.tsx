@@ -49,7 +49,11 @@ export default function Modal({ winner }: Props) {
         animate="visible"
         className="modal-content"
       >
-        <img className="modal_xiaoxin" alt="xiaoxin" src="xiaoxin_win.gif" />
+        <img
+          className="modal_xiaoxin"
+          alt="xiaoxin"
+          src="../../assets/xiaoxin_win.gif"
+        />
         <p className="modal-title">恭喜</p>
         {isWindows11 ? (
           <span className="modal-winner">

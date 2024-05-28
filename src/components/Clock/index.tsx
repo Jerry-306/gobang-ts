@@ -31,7 +31,7 @@ export default function Clock() {
       variants={variants}
       className="clock"
     >
-      <img className="xiaoxin" alt="xiaoxin" src="xiaoxin.gif" />
+      <img className="xiaoxin" alt="xiaoxin" src="../../assets/xiaoxin.gif" />
       {nowTime}
     </motion.div>
   );

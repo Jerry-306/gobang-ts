@@ -151,7 +151,7 @@ export default function Modal({ player }: Props) {
         <img
           className="timeout-modal-xiaoxin"
           alt="xiaoxin"
-          src="xiaoxin_win.gif"
+          src="../../assets/xiaoxin_win.gif"
         />
         <p className="timeout-modal-title">您思考时间太长了哦！</p>
         {isWindows11 ? (
